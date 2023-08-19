@@ -12,8 +12,8 @@ pipeline {
                                 password(credentialsId: 'docker-hub', variable: 'DOCKER_PASSWORD')]) {
                     withDockerRegistry([credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/']) {
                         sh "docker login -u $DOCKER_USERNAME --password-stdin <<< $DOCKER_PASSWORD"
-                        def customImage = docker.build("22424018/tinh.than")
-                        customImage.push()
+                        sh 'docker build -t 22424018/tinhl.than .'
+                        sh 'docker push 22424018/tinhl.than'
                     }
                 }
             }
