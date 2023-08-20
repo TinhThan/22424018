@@ -13,7 +13,6 @@ pipeline {
             steps {
                 sh 'docker build -t 22424018/tinh.than .'
                 sh 'docker push 22424018/tinh.than'
-                }
             }
         }
     }
