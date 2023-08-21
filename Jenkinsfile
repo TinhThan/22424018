@@ -8,8 +8,8 @@ pipeline {
         }
         stage('build docker') {
             steps {
-                bat 'docker build -t 22424018/tinhl.than .'
-                bat 'docker push 22424018/tinhl.than'
+                bat 'docker build -t 22424018/tinh.than .'
+                bat 'docker push 22424018/tinh.than'
             }
         }
     }
